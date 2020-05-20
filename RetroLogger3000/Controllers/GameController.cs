@@ -11,14 +11,14 @@ using RetroLogger3000.Models;
 
 namespace RetroLogger3000.Controllers
 {
-    public class StudentController : Controller
+    public class GameController : Controller
     {
-        private SchoolContext db = new SchoolContext();
+        private RetroContext db = new RetroContext();
 
         // GET: Student
         public ActionResult Index()
         {
-            return View(db.Students.ToList());
+            return View(db.Games.ToList());
         }
 
         // GET: Student/Details/5
@@ -28,12 +28,12 @@ namespace RetroLogger3000.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
-            if (student == null)
+            Game game = db.Games.Find(id);
+            if (game == null)
             {
                 return HttpNotFound();
             }
-            return View(student);
+            return View(game);
         }
 
         // GET: Student/Create
@@ -47,16 +47,16 @@ namespace RetroLogger3000.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,LastName,FirstMidName,EnrollmentDate")] Student student)
+        public ActionResult Create([Bind(Include = "ID,LastName,FirstMidName,EnrollmentDate")] Game game)
         {
             if (ModelState.IsValid)
             {
-                db.Students.Add(student);
+                db.Games.Add(game);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(student);
+            return View(game);
         }
 
         // GET: Student/Edit/5
@@ -66,12 +66,12 @@ namespace RetroLogger3000.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
-            if (student == null)
+            Game game = db.Games.Find(id);
+            if (game == null)
             {
                 return HttpNotFound();
             }
-            return View(student);
+            return View(game);
         }
 
         // POST: Student/Edit/5
@@ -79,15 +79,15 @@ namespace RetroLogger3000.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,LastName,FirstMidName,EnrollmentDate")] Student student)
+        public ActionResult Edit([Bind(Include = "ID,LastName,FirstMidName,EnrollmentDate")] Game game)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(student).State = EntityState.Modified;
+                db.Entry(game).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(student);
+            return View(game);
         }
 
         // GET: Student/Delete/5
@@ -97,12 +97,12 @@ namespace RetroLogger3000.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
-            if (student == null)
+            Game game = db.Games.Find(id);
+            if (game == null)
             {
                 return HttpNotFound();
             }
-            return View(student);
+            return View(game);
         }
 
         // POST: Student/Delete/5
@@ -110,8 +110,8 @@ namespace RetroLogger3000.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Student student = db.Students.Find(id);
-            db.Students.Remove(student);
+            Game game = db.Games.Find(id);
+            db.Games.Remove(game);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

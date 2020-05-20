@@ -4,16 +4,16 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace RetroLogger3000.DAL
 {
-    public class SchoolContext : DbContext
+    public class RetroContext : DbContext
     {
 
-        public SchoolContext() : base("SchoolContext")
+        public RetroContext() : base("SchoolContext")
         {
         }
 
-        public DbSet<Student> Students { get; set; }
-        public DbSet<Enrollment> Enrollments { get; set; }
-        public DbSet<Course> Courses { get; set; }
+        public DbSet<Game> Games { get; set; }
+        public DbSet<GameConsole> GameConsoles { get; set; }
+        public DbSet<GamePad> GamePads { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
