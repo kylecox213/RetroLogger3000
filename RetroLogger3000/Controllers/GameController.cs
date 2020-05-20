@@ -49,11 +49,19 @@ namespace RetroLogger3000.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Title,Year,Rank,Clean,Complete,Beaten,Duplicate")] Game game)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Games.Add(game);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    db.Games.Add(game);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (DataException /* dex */)
+            {
+                //Log the error (uncomment dex variable name and add a line here to write a log.
+                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }
 
             return View(game);
