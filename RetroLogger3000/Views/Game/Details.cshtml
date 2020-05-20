@@ -1,14 +1,14 @@
 ﻿@model RetroLogger3000.Models.Game
 
 @{
-    ViewBag.Title = "Details";
+	ViewBag.Title = "Details";
 }
 
 <h2>Details</h2>
 
 <div>
-    <h4>Game</h4>
-    <hr />
+	<h4>Game</h4>
+	<hr />
 	<dl class="dl-horizontal">
 		<dt>
 			@Html.DisplayNameFor(model => model.Title)
@@ -65,9 +65,32 @@
 			@Html.DisplayFor(model => model.Duplicate)
 		</dd>
 
+		<dt>
+			@Html.DisplayNameFor(model => model.GameConsoles)
+		</dt>
+
+		<dd>
+			<table class="table">
+				<tr>
+					<th>Game Console</th>
+					<th>Game Pad</th>
+				</tr>
+				@foreach (var item in Model.GameConsoles)
+				{
+					<tr>
+						<td>
+							@Html.DisplayFor(modelItem => item.GamePad.Type)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Type)
+						</td>
+					</tr>
+				}
+			</table>
+		</dd>
 	</dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+	@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+	@Html.ActionLink("Back to List", "Index")
 </p>
