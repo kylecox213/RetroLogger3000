@@ -47,7 +47,7 @@ namespace RetroLogger3000.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,LastName,FirstMidName,EnrollmentDate")] Game game)
+        public ActionResult Create([Bind(Include = "ID,Title,Year,Rank,Clean,Complete,Beaten,Duplicate")] Game game)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace RetroLogger3000.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,LastName,FirstMidName,EnrollmentDate")] Game game)
+        public ActionResult Edit([Bind(Include = "ID,Title,Year,Rank,Clean,Complete,Beaten,Duplicate")] Game game)
         {
             if (ModelState.IsValid)
             {
