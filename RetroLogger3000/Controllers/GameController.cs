@@ -15,13 +15,33 @@ namespace RetroLogger3000.Controllers
     {
         private RetroContext db = new RetroContext();
 
-        // GET: Student
-        public ActionResult Index()
+        // GET: Game
+        public ActionResult Index(string sortOrder)
         {
-            return View(db.Games.ToList());
+            // ternary statements enabling the view to set the column heading hyperlinks
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Year" ? "year_desc" : "Year";
+            var games = from g in db.Games
+                           select g;
+            switch (sortOrder)
+            {
+                case "title_desc":
+                    games = games.OrderByDescending(g => g.Title);
+                    break;
+                case "Date":
+                    games = games.OrderBy(g => g.Year);
+                    break;
+                case "year_desc":
+                    games = games.OrderByDescending(g => g.Year);
+                    break;
+                default:
+                    games = games.OrderBy(g => g.Title);
+                    break;
+            }
+            return View(games.ToList());
         }
 
-        // GET: Student/Details/5
+        // GET: Game/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,15 +56,13 @@ namespace RetroLogger3000.Controllers
             return View(game);
         }
 
-        // GET: Student/Create
+        // GET: Game/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Student/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Game/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Title,Year,Rank,Clean,Complete,Beaten,Duplicate")] Game game)
@@ -67,7 +85,7 @@ namespace RetroLogger3000.Controllers
             return View(game);
         }
 
-        // GET: Student/Edit/5
+        // GET: Game/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -82,9 +100,7 @@ namespace RetroLogger3000.Controllers
             return View(game);
         }
 
-        // POST: Student/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Game/Edit/5
         [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
         public ActionResult EditPost(int? id)
@@ -112,7 +128,7 @@ namespace RetroLogger3000.Controllers
             return View(gameToUpdate);
         }
 
-        // GET: Student/Delete/5
+        // GET: Game/Delete/5
         public ActionResult Delete(int? id, bool? saveChangesError = false)
         {
             if (id == null)
@@ -131,7 +147,7 @@ namespace RetroLogger3000.Controllers
             return View(game);
         }
 
-        // POST: Student/Delete/5
+        // POST: Game/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id)
