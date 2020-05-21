@@ -61,7 +61,7 @@ namespace RetroLogger3000.Controllers
                     break;
             }
 
-            int pageSize = 3;
+            int pageSize = 8;
             // ?? null-coalescing operator defines a default values for a nullable type----(page ?? 1) return the value of page or return 1 if null
             int pageNumber = (page ?? 1);
             return View(games.ToPagedList(pageNumber, pageSize));
