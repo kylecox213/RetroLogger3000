@@ -50,7 +50,7 @@ namespace RetroLogger3000.Controllers
                 case "title_desc":
                     games = games.OrderByDescending(g => g.Title);
                     break;
-                case "Date":
+                case "Year":
                     games = games.OrderBy(g => g.Year);
                     break;
                 case "year_desc":
