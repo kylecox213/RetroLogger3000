@@ -16,13 +16,17 @@ namespace RetroLogger3000.Controllers
         private RetroContext db = new RetroContext();
 
         // GET: Game
-        public ActionResult Index(string sortOrder)
+        public ViewResult Index(string sortOrder, string searchString)
         {
             // ternary statements enabling the view to set the column heading hyperlinks
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "";
             ViewBag.DateSortParm = sortOrder == "Year" ? "year_desc" : "Year";
             var games = from g in db.Games
                            select g;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                games = games.Where(g => g.Title.Contains(searchString));
+            }
             switch (sortOrder)
             {
                 case "title_desc":
