@@ -1,14 +1,23 @@
 ﻿@model IEnumerable<RetroLogger3000.Models.Game>
 
 @{
-    ViewBag.Title = "Index";
+	ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+	@Html.ActionLink("Create New", "Create")
 </p>
+
+
+@using (Html.BeginForm())
+{
+	<p>
+		Find by title: @Html.TextBox("SearchString")
+		<input type="submit" value="Search" />
+	</p>
+}
 <table class="table">
 	<tr>
 		<th>
@@ -35,35 +44,36 @@
 		<th></th>
 	</tr>
 
-@foreach (var item in Model) {
-<tr>
-	<td>
-		@Html.DisplayFor(modelItem => item.Title)
-	</td>
-	<td>
-		@Html.DisplayFor(modelItem => item.Year)
-	</td>
-	<td>
-		@Html.DisplayFor(modelItem => item.Rank)
-	</td>
-	<td>
-		@Html.DisplayFor(modelItem => item.Clean)
-	</td>
-	<td>
-		@Html.DisplayFor(modelItem => item.Complete)
-	</td>
-	<td>
-		@Html.DisplayFor(modelItem => item.Beaten)
-	</td>
-	<td>
-		@Html.DisplayFor(modelItem => item.Duplicate)
-	</td>
-	<td>
-		@Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-		@Html.ActionLink("Details", "Details", new { id = item.ID }) |
-		@Html.ActionLink("Delete", "Delete", new { id = item.ID })
-	</td>
-</tr>
-}
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.Title)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Year)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Rank)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Clean)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Complete)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Beaten)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Duplicate)
+			</td>
+			<td>
+				@Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+				@Html.ActionLink("Details", "Details", new { id = item.ID }) |
+				@Html.ActionLink("Delete", "Delete", new { id = item.ID })
+			</td>
+		</tr>
+	}
 
 </table>
