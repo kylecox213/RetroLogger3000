@@ -141,6 +141,9 @@ namespace RetroLogger3000.Controllers
                 Game game = db.Games.Find(id);
                 db.Games.Remove(game);
                 db.SaveChanges();
+
+                //Game gameToDelete = new Game() { ID = id };
+                //db.Entry(gameToDelete).State = EntityState.Deleted;
             }
             catch (DataException/* dex */)
             {
