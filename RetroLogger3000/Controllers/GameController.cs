@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using RetroLogger3000.DAL;
 using RetroLogger3000.Models;
+using PagedList;
 
 namespace RetroLogger3000.Controllers
 {
@@ -16,11 +17,28 @@ namespace RetroLogger3000.Controllers
         private RetroContext db = new RetroContext();
 
         // GET: Game
-        public ViewResult Index(string sortOrder, string searchString)
+
+        // add a page parameter, current sort order parameter, and current filter parameter to the method signature
+        public ViewResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
+            //viewbag prop to provide the view with the current sort order; included in page links to keep sort order the same while paging
+            ViewBag.CurrentSort = sortOrder;
+
             // ternary statements enabling the view to set the column heading hyperlinks
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "";
             ViewBag.DateSortParm = sortOrder == "Year" ? "year_desc" : "Year";
+
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewBag.CurrentFilter = searchString;
+
             var games = from g in db.Games
                            select g;
             if (!String.IsNullOrEmpty(searchString))
@@ -38,11 +56,17 @@ namespace RetroLogger3000.Controllers
                 case "year_desc":
                     games = games.OrderByDescending(g => g.Year);
                     break;
-                default:
+                default: // Title ascending
                     games = games.OrderBy(g => g.Title);
                     break;
             }
-            return View(games.ToList());
+
+            int pageSize = 3;
+            // ?? null-coalescing operator defines a default values for a nullable type----(page ?? 1) return the value of page or return 1 if null
+            int pageNumber = (page ?? 1);
+            return View(games.ToPagedList(pageNumber, pageSize));
+
+            //return View(games.ToList());
         }
 
         // GET: Game/Details/5
