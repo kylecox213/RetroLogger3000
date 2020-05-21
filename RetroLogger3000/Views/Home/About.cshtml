@@ -1,7 +1,30 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿@model IEnumerable<RetroLogger3000.ViewModels.GamesTotal>
 
-<p>Use this area to provide additional information.</p>
+@{
+	ViewBag.Title = "Total Retrogame Count";
+}
+
+<h2>Total Retrogame Count</h2>
+
+<table>
+	<tr>
+		<th>
+			Title
+		</th>
+		<th>
+			Count
+		</th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.Title)
+			</td>
+			<td>
+				@item.GameCount
+			</td>
+		</tr>
+	}
+</table>
