@@ -1,7 +1,11 @@
-﻿@model IEnumerable<RetroLogger3000.Models.Game>
+﻿@*@model IEnumerable<RetroLogger3000.Models.Game>*@
+
+@model PagedList.IPagedList<RetroLogger3000.Models.Game>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
-	ViewBag.Title = "Index";
+	ViewBag.Title = "Games";
 }
 
 <h2>Catalog</h2>
@@ -10,36 +14,35 @@
 	@Html.ActionLink("Create New", "Create")
 </p>
 
-
-@using (Html.BeginForm())
+@using (Html.BeginForm("Index", "Game", FormMethod.Get))
 {
 	<p>
-		Find by title: @Html.TextBox("SearchString")
+		Find by title: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
 		<input type="submit" value="Search" />
 	</p>
 }
 <table class="table">
 	<tr>
 		<th>
-			@Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.NameSortParm })
+			@Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
 		</th>
 		<th>
-			@Html.ActionLink("Year", "Index", new { sortOrder = ViewBag.NameSortParm })
+			@Html.ActionLink("Year", "Index", new { sortOrder = ViewBag.YearSortParm, currentFilter = ViewBag.CurrentFilter })
 		</th>
 		<th>
-			@Html.ActionLink("Rank", "Index", new { sortOrder = ViewBag.NameSortParm })
+			@Html.ActionLink("Rank", "Index", new { sortOrder = ViewBag.RankSortParm, currentFilter = ViewBag.CurrentFilter })
 		</th>
 		<th>
-			@Html.DisplayNameFor(model => model.Clean)
+			@Html.ActionLink("Clean", "Index", new { sortOrder = ViewBag.CleanSortParm, currentFilter = ViewBag.CurrentFilter })
 		</th>
 		<th>
-			@Html.DisplayNameFor(model => model.Complete)
+			@Html.ActionLink("Complete", "Index", new { sortOrder = ViewBag.CompleteSortParm, currentFilter = ViewBag.CurrentFilter })
 		</th>
 		<th>
-			@Html.DisplayNameFor(model => model.Beaten)
+			@Html.ActionLink("Beaten", "Index", new { sortOrder = ViewBag.BeatenSortParm, currentFilter = ViewBag.CurrentFilter })
 		</th>
 		<th>
-			@Html.DisplayNameFor(model => model.Duplicate)
+			@Html.ActionLink("Duplicate", "Index", new { sortOrder = ViewBag.DuplicateSortParm, currentFilter = ViewBag.CurrentFilter })
 		</th>
 		<th></th>
 	</tr>
@@ -77,3 +80,8 @@
 	}
 
 </table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+	new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
