@@ -7,7 +7,7 @@ namespace RetroLogger3000.DAL
     public class RetroContext : DbContext
     {
 
-        public RetroContext() : base("SchoolContext")
+        public RetroContext() : base("RetroContext")
         {
         }
 

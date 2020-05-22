@@ -136,6 +136,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\GameController.cs" />
     <Compile Include="DAL\GameConfiguration.cs" />
+    <Compile Include="DAL\GameInterceptorLogging.cs" />
     <Compile Include="DAL\RetroContext.cs" />
     <Compile Include="DAL\RetroInitializer.cs" />
     <Compile Include="Global.asax.cs">
