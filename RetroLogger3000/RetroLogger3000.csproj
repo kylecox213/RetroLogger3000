@@ -145,6 +145,11 @@
     </Compile>
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Migrations\202005220349496_InitialCreate.cs" />
+    <Compile Include="Migrations\202005220349496_InitialCreate.designer.cs">
+      <DependentUpon>202005220349496_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\GamePad.cs" />
     <Compile Include="Models\GameConsole.cs" />
     <Compile Include="Models\Game.cs" />
@@ -209,6 +214,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202005220349496_InitialCreate.resx">
+      <DependentUpon>202005220349496_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
