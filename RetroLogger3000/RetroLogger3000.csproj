@@ -159,6 +159,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Adapter.cs" />
+    <Compile Include="Models\Cable.cs" />
     <Compile Include="Models\GamePad.cs" />
     <Compile Include="Models\GameConsole.cs" />
     <Compile Include="Models\Game.cs" />

@@ -7,12 +7,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RetroLogger3000.Models
 {
-	public class Adapter
+	public class Cable
 	{
 		public int ID { get; set; }
 
 		[Required]
-		[StringLength(25), Display(Name = "Adapter Type")]
+		[Display(Name = "Cable Type")]
 		public string Type { get; set; }
 
 		public int Length { get; set; }
