@@ -149,6 +149,14 @@
     <Compile Include="Migrations\202005220349496_InitialCreate.designer.cs">
       <DependentUpon>202005220349496_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005240641333_DataAnnotations.cs" />
+    <Compile Include="Migrations\202005240641333_DataAnnotations.designer.cs">
+      <DependentUpon>202005240641333_DataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005240646407_TitleYearColumn.cs" />
+    <Compile Include="Migrations\202005240646407_TitleYearColumn.designer.cs">
+      <DependentUpon>202005240646407_TitleYearColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\GamePad.cs" />
     <Compile Include="Models\GameConsole.cs" />
@@ -218,6 +226,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202005220349496_InitialCreate.resx">
       <DependentUpon>202005220349496_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005240641333_DataAnnotations.resx">
+      <DependentUpon>202005240641333_DataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005240646407_TitleYearColumn.resx">
+      <DependentUpon>202005240646407_TitleYearColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
