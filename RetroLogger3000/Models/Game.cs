@@ -30,7 +30,6 @@ namespace RetroLogger3000.Models
 
 		public bool Duplicate { get; set; }
 
-
 		public virtual GameConsole GameConsoles { get; set; }
 		public virtual ICollection<GamePad> GamePads { get; set; }
 	}

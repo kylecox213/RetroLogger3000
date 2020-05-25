@@ -19,6 +19,7 @@ namespace RetroLogger3000.Models
 
 		public bool Functional { get; set; }
 
+		public virtual Game Game { get; set; }
 		public virtual GameConsole GameConsoles { get; set; }
 	}
 }
