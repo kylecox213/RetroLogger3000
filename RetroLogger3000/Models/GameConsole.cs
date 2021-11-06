@@ -5,13 +5,19 @@ using System.Threading.Tasks;
 
 namespace RetroLogger3000.Models
 {
-	public class GameConsole
+	public abstract class GameConsole
 	{
-		public string Model;
-		public DateTime ReleaseDate;
-		public string Manufacturer;
-		public string Developer;
+		public GameConsole(int consoleID = 0, string consoleModel = "", int releaseYear = 0, string manufacturer = "")
+		{
+			ConsoleID = consoleID;
+			ConsoleModel = consoleModel;
+			ReleaseYear = releaseYear;
+			Manufacturer = manufacturer;
+		}
 
-		public bool OnWishList;
+		public int ConsoleID { get; set; }
+		public string ConsoleModel { get; set; }
+		public int ReleaseYear { get; set; }
+		public string Manufacturer { get; set; }
 	}
 }

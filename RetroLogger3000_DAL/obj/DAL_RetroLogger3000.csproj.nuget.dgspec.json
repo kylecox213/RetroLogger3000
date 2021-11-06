@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\f5pie\\OneDrive\\Desktop\\C_Sharp_Proj\\RetroLogger3000\\RetroLogger3000_DAL\\DAL_RetroLogger3000.csproj": {}
+    "C:\\Users\\kylec\\OneDrive\\Desktop\\Projects\\RetroLogger3000\\RetroLogger3000_DAL\\DAL_RetroLogger3000.csproj": {}
   },
   "projects": {
-    "C:\\Users\\f5pie\\OneDrive\\Desktop\\C_Sharp_Proj\\RetroLogger3000\\RetroLogger3000_DAL\\DAL_RetroLogger3000.csproj": {
+    "C:\\Users\\kylec\\OneDrive\\Desktop\\Projects\\RetroLogger3000\\RetroLogger3000_DAL\\DAL_RetroLogger3000.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\f5pie\\OneDrive\\Desktop\\C_Sharp_Proj\\RetroLogger3000\\RetroLogger3000_DAL\\DAL_RetroLogger3000.csproj",
+        "projectUniqueName": "C:\\Users\\kylec\\OneDrive\\Desktop\\Projects\\RetroLogger3000\\RetroLogger3000_DAL\\DAL_RetroLogger3000.csproj",
         "projectName": "DAL_RetroLogger3000",
-        "projectPath": "C:\\Users\\f5pie\\OneDrive\\Desktop\\C_Sharp_Proj\\RetroLogger3000\\RetroLogger3000_DAL\\DAL_RetroLogger3000.csproj",
-        "packagesPath": "C:\\Users\\f5pie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\f5pie\\OneDrive\\Desktop\\C_Sharp_Proj\\RetroLogger3000\\RetroLogger3000_DAL\\obj\\",
+        "projectPath": "C:\\Users\\kylec\\OneDrive\\Desktop\\Projects\\RetroLogger3000\\RetroLogger3000_DAL\\DAL_RetroLogger3000.csproj",
+        "packagesPath": "C:\\Users\\kylec\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kylec\\OneDrive\\Desktop\\Projects\\RetroLogger3000\\RetroLogger3000_DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\f5pie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kylec\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -59,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

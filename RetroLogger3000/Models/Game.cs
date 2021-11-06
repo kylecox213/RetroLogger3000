@@ -28,7 +28,7 @@ namespace RetroLogger3000.Models
 		public int Rank { get; set; }
 		public int Score { get; set; }
 
-		public void SetRank(int rank)
+		public void GetRank(int rank)
 		{
 			if (rank < 1)
 				throw new ArgumentOutOfRangeException("Game rank can not be set to a value less than 1.");
@@ -49,7 +49,7 @@ namespace RetroLogger3000.Models
 			}
 		}
 
-		public void SetScore(int score)
+		public void GetScore(int score)
 		{
 			if (score < 1)
 				throw new ArgumentOutOfRangeException("Game score can not be set to a value less than 1.");
