@@ -1,0 +1,8 @@
+C:\Users\f5pie\OneDrive\Desktop\Projects\RetroLog\RetroLogger3000\RetroLogger3000\obj\Debug\net5.0\RetroLogger3000.csproj.AssemblyReference.cache
+C:\Users\f5pie\OneDrive\Desktop\Projects\RetroLog\RetroLogger3000\RetroLogger3000\obj\Debug\net5.0\RetroLogger3000.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\f5pie\OneDrive\Desktop\Projects\RetroLog\RetroLogger3000\RetroLogger3000\obj\Debug\net5.0\RetroLogger3000.AssemblyInfoInputs.cache
+C:\Users\f5pie\OneDrive\Desktop\Projects\RetroLog\RetroLogger3000\RetroLogger3000\obj\Debug\net5.0\RetroLogger3000.AssemblyInfo.cs
+C:\Users\f5pie\OneDrive\Desktop\Projects\RetroLog\RetroLogger3000\RetroLogger3000\obj\Debug\net5.0\RetroLogger3000.csproj.CoreCompileInputs.cache
+C:\Users\f5pie\OneDrive\Desktop\Projects\RetroLog\RetroLogger3000\RetroLogger3000\obj\Debug\net5.0\RetroLogger3000.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\f5pie\OneDrive\Desktop\Projects\RetroLog\RetroLogger3000\RetroLogger3000\obj\Debug\net5.0\RetroLogger3000.RazorAssemblyInfo.cache
+C:\Users\f5pie\OneDrive\Desktop\Projects\RetroLog\RetroLogger3000\RetroLogger3000\obj\Debug\net5.0\RetroLogger3000.RazorAssemblyInfo.cs
