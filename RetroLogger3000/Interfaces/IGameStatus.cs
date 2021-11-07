@@ -11,6 +11,4 @@ namespace RetroLogger3000.Interfaces
 		void GetGameStatus(bool gameState);
 		void GetGameAcquisitionStatus(bool acquisitionState);
 	}
-
-	
 }

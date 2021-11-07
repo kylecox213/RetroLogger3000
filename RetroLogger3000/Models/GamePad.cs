@@ -5,12 +5,22 @@ using System.Threading.Tasks;
 
 namespace RetroLogger3000.Models
 {
-	public class GamePad
+	public abstract class GamePad
 	{
-		public string Model;
-		public DateTime ReleaseDate;
-		public string Manufacturer;
+		public GamePad(int gamePadID = 0, string gamePadModel = "", int releaseYear = 0, string manufacturer = "")
+		{
+			this.GamePadID = gamePadID;
+			this.GamePadModel = gamePadModel;
+			this.ReleaseYear = releaseYear;
+			this.Manufacturer = manufacturer;
+		}
 
-		public bool OnWishList;
+		public int GamePadID { get; set; }
+		public string GamePadModel { get; set; }
+		public int ReleaseYear { get; set; }
+		public string Manufacturer { get; set; }
+
+		//public bool OnWishList
+		//private int releaseYear;
 	}
 }
