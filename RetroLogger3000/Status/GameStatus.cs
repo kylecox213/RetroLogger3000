@@ -18,9 +18,5 @@ namespace RetroLogger3000.Models
 			Console.WriteLine(virtualCopy ? "This game title does not have an accessible virtual copy." : "This game title has an accessible virtual copy.");
 		}
 		#endregion
-
-
-		
-
 	}
 }

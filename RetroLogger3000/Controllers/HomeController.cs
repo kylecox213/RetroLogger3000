@@ -34,9 +34,4 @@ namespace RetroLogger3000.Controllers
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
 		}
 	}
-
-	internal class ErrorViewModel
-	{
-		public string RequestId { get; set; }
-	}
 }

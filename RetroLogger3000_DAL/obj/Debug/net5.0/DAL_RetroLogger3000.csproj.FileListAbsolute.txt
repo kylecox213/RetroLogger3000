@@ -1,0 +1,16 @@
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\RetroLogger3000_DAL\bin\Debug\net5.0\DAL_RetroLogger3000.exe
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\RetroLogger3000_DAL\bin\Debug\net5.0\DAL_RetroLogger3000.deps.json
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\RetroLogger3000_DAL\bin\Debug\net5.0\DAL_RetroLogger3000.runtimeconfig.json
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\RetroLogger3000_DAL\bin\Debug\net5.0\DAL_RetroLogger3000.runtimeconfig.dev.json
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\RetroLogger3000_DAL\bin\Debug\net5.0\DAL_RetroLogger3000.dll
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\RetroLogger3000_DAL\bin\Debug\net5.0\ref\DAL_RetroLogger3000.dll
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\RetroLogger3000_DAL\bin\Debug\net5.0\DAL_RetroLogger3000.pdb
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\RetroLogger3000_DAL\obj\Debug\net5.0\DAL_RetroLogger3000.csproj.AssemblyReference.cache
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\RetroLogger3000_DAL\obj\Debug\net5.0\DAL_RetroLogger3000.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\RetroLogger3000_DAL\obj\Debug\net5.0\DAL_RetroLogger3000.AssemblyInfoInputs.cache
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\RetroLogger3000_DAL\obj\Debug\net5.0\DAL_RetroLogger3000.AssemblyInfo.cs
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\RetroLogger3000_DAL\obj\Debug\net5.0\DAL_RetroLogger3000.csproj.CoreCompileInputs.cache
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\RetroLogger3000_DAL\obj\Debug\net5.0\DAL_RetroLogger3000.dll
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\RetroLogger3000_DAL\obj\Debug\net5.0\ref\DAL_RetroLogger3000.dll
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\RetroLogger3000_DAL\obj\Debug\net5.0\DAL_RetroLogger3000.pdb
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\RetroLogger3000_DAL\obj\Debug\net5.0\DAL_RetroLogger3000.genruntimeconfig.cache

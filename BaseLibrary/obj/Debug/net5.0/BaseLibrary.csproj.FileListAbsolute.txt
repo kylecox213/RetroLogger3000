@@ -1,0 +1,12 @@
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\BaseLibrary\bin\Debug\net5.0\BaseLibrary.deps.json
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\BaseLibrary\bin\Debug\net5.0\BaseLibrary.dll
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\BaseLibrary\bin\Debug\net5.0\ref\BaseLibrary.dll
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\BaseLibrary\bin\Debug\net5.0\BaseLibrary.pdb
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\BaseLibrary\obj\Debug\net5.0\BaseLibrary.csproj.AssemblyReference.cache
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\BaseLibrary\obj\Debug\net5.0\BaseLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\BaseLibrary\obj\Debug\net5.0\BaseLibrary.AssemblyInfoInputs.cache
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\BaseLibrary\obj\Debug\net5.0\BaseLibrary.AssemblyInfo.cs
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\BaseLibrary\obj\Debug\net5.0\BaseLibrary.csproj.CoreCompileInputs.cache
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\BaseLibrary\obj\Debug\net5.0\BaseLibrary.dll
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\BaseLibrary\obj\Debug\net5.0\ref\BaseLibrary.dll
+C:\Users\kylec\OneDrive\Desktop\Projects\RetroLogger3000\BaseLibrary\obj\Debug\net5.0\BaseLibrary.pdb
